@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ブラインドタッチしかできなかった私が、“会えるオンライン秘書”になるまで｜石渡有沙（Oari）</title>
+<meta name="description" content="「私には、何もない」——そう思っていた専業主婦が、AIを使いこなす経営者の秘書になるまで。ブラインドタッチしかできなかった3児の母の、ぜんぶ実話の記録。Kindleで好評発売中。">
+
+<!-- OGP（SNSでシェアされた時の表示。ページ内にSNSリンクは置かないが、本のシェア対策として最小限） -->
+<meta property="og:title" content="ブラインドタッチしかできなかった私が、“会えるオンライン秘書”になるまで">
+<meta property="og:description" content="「私には、何もない」と思っていた専業主婦が、AIを使いこなす経営者の秘書になるまでの、ぜんぶ実話の記録。">
+<meta property="og:type" content="book">
+<meta property="og:image" content="./cover.png">
+
+<!-- Google Fonts：見出し＝明朝（Shippori Mincho）／本文＝ゴシック（Noto Sans JP） -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ============================================================
+     カラー・基本変数
+     ============================================================ */
+  :root{
+    --base:#F7F3F1;        /* オフホワイト背景 */
+    --navy:#1E2D5A;        /* ネイビー（濃色） */
+    --rose:#C4888E;        /* ダスティローズ（アクセント） */
+    --gold-1:#C9A86A;      /* ゴールド明 */
+    --gold-2:#B8945A;      /* ゴールド暗 */
+    --text:#2A2A2A;        /* 本文 */
+    --text-on-navy:#F4EFEA;/* 紺地の上の文字 */
+    --rose-soft:#F3E7E6;   /* 淡いローズ背景 */
+    --line:#D9CFC7;        /* 細い飾り罫 */
+    --maxw:560px;          /* コンテンツ最大幅（モバイル基準） */
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",sans-serif;
+    color:var(--text);
+    background:var(--base);
+    line-height:1.9;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  /* 下部固定CTAバーの分の余白（最後が隠れないように） */
+  body{padding-bottom:64px;}
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* 見出しは明朝 */
+  h1,h2,h3,.mincho{
+    font-family:"Shippori Mincho",serif;
+    font-weight:600;
+    line-height:1.5;
+  }
+
+  /* ============================================================
+     セクション共通
+     ============================================================ */
+  section{
+    padding:64px 0;
+    position:relative;
+  }
+  section.navy{
+    background:var(--navy);
+    color:var(--text-on-navy);
+  }
+  section.rose-soft{
+    background:var(--rose-soft);
+  }
+
+  /* セクション見出し（差し色つき） */
+  .sec-head{
+    font-size:1.5rem;
+    text-align:center;
+    margin-bottom:36px;
+    line-height:1.6;
+  }
+  .sec-head .accent{color:var(--rose);}
+  .navy .sec-head .accent{color:var(--gold-1);}
+
+  /* 見出し下の細い飾り */
+  .ornament{
+    display:block;
+    width:52px;
+    height:2px;
+    background:var(--gold-1);
+    margin:18px auto 0;
+    position:relative;
+  }
+  .ornament::before,.ornament::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    width:5px;height:5px;
+    background:var(--gold-1);
+    border-radius:50%;
+    transform:translateY(-50%);
+  }
+  .ornament::before{left:-12px;}
+  .ornament::after{right:-12px;}
+
+  /* ============================================================
+     ① ファーストビュー
+     ============================================================ */
+  .hero{
+    background:var(--navy);
+    color:var(--text-on-navy);
+    text-align:center;
+    padding:56px 0 64px;
+    position:relative;
+    overflow:hidden;
+  }
+  /* 紺地のうっすらした光の演出（控えめ） */
+  .hero::before{
+    content:"";
+    position:absolute;
+    top:-30%;left:50%;
+    width:420px;height:420px;
+    transform:translateX(-50%);
+    background:radial-gradient(circle, rgba(201,168,106,0.18) 0%, rgba(30,45,90,0) 70%);
+    pointer-events:none;
+  }
+  .hero .wrap{position:relative;z-index:1;}
+
+  .hero-cover{
+    width:62%;
+    max-width:280px;
+    height:auto;
+    border-radius:6px;
+    box-shadow:0 22px 50px rgba(0,0,0,0.45), 0 4px 12px rgba(0,0,0,0.3);
+    margin:0 auto 32px;
+    display:block;
+  }
+  /* 表紙画像が未配置でも崩れないための最低高さの枠 */
+  .hero-cover{background:rgba(255,255,255,0.04);}
+
+  .hero h1{
+    font-size:2.1rem;
+    letter-spacing:0.02em;
+    margin-bottom:18px;
+    color:#fff;
+  }
+  .hero .sub{
+    font-size:1.02rem;
+    line-height:1.85;
+    color:var(--text-on-navy);
+    margin:0 auto 16px;
+    max-width:420px;
+  }
+  .hero .note{
+    font-size:0.8rem;
+    color:rgba(244,239,234,0.7);
+    margin-top:8px;
+    letter-spacing:0.02em;
+  }
+
+  /* ============================================================
+     CTAボタン（共通）
+     ============================================================ */
+  .cta-area{
+    text-align:center;
+    margin:40px 0 0;
+  }
+  .cta{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    width:84%;
+    max-width:400px;
+    min-height:58px;
+    padding:16px 24px;
+    background:linear-gradient(135deg, var(--gold-1) 0%, var(--gold-2) 100%);
+    color:var(--navy);
+    font-family:"Noto Sans JP",sans-serif;
+    font-weight:700;
+    font-size:1.08rem;
+    text-decoration:none;
+    border-radius:999px;
+    box-shadow:0 8px 22px rgba(184,148,90,0.42), inset 0 1px 0 rgba(255,255,255,0.35);
+    letter-spacing:0.03em;
+    transition:transform .12s ease, box-shadow .12s ease, filter .12s ease;
+    position:relative;
+  }
+  .cta:hover{
+    filter:brightness(1.05);
+    box-shadow:0 12px 28px rgba(184,148,90,0.55), inset 0 1px 0 rgba(255,255,255,0.45);
+  }
+  .cta:active{
+    transform:translateY(2px);
+    box-shadow:0 4px 12px rgba(184,148,90,0.4), inset 0 1px 0 rgba(255,255,255,0.3);
+  }
+  /* ヒーロー内の小さめCTA */
+  .cta.small{
+    min-height:50px;
+    font-size:0.98rem;
+    width:auto;
+    padding:14px 30px;
+  }
+  /* ラストCTA（最大） */
+  .cta.large{
+    min-height:64px;
+    font-size:1.18rem;
+    width:90%;
+  }
+  /* 白文字版（紺地で映えるよう濃紺文字のままだが、念のため） */
+
+  .cta-note{
+    display:block;
+    font-size:0.8rem;
+    margin-top:14px;
+    color:inherit;
+    opacity:0.85;
+    letter-spacing:0.02em;
+  }
+  .navy .cta-note{color:rgba(244,239,234,0.82);}
+
+  /* ============================================================
+     ② 共感パート（チェックリスト）
+     ============================================================ */
+  .checklist{
+    list-style:none;
+    margin:0 auto;
+    max-width:480px;
+  }
+  .checklist li{
+    position:relative;
+    padding:0 0 0 38px;
+    margin-bottom:26px;
+    font-size:1.0rem;
+    line-height:1.85;
+  }
+  .checklist li::before{
+    content:"";
+    position:absolute;
+    left:0;top:5px;
+    width:22px;height:22px;
+    border:1.5px solid var(--rose);
+    border-radius:4px;
+    background:#fff;
+  }
+  /* チェックマーク */
+  .checklist li::after{
+    content:"";
+    position:absolute;
+    left:7px;top:8px;
+    width:6px;height:11px;
+    border:solid var(--rose);
+    border-width:0 2px 2px 0;
+    transform:rotate(45deg);
+  }
+  .empathy-close{
+    text-align:center;
+    font-size:1.25rem;
+    margin-top:40px;
+    color:var(--navy);
+  }
+
+  /* ============================================================
+     ③ 物語の予告
+     ============================================================ */
+  .story p{
+    margin-bottom:24px;
+    font-size:1.02rem;
+  }
+  .story .lead-mincho{
+    font-family:"Shippori Mincho",serif;
+    font-size:1.12rem;
+    line-height:1.9;
+    text-align:center;
+    color:var(--navy);
+  }
+  .story-block{
+    max-width:480px;
+    margin:0 auto;
+  }
+
+  /* ============================================================
+     ④ 正直さ（ネイビー）
+     ============================================================ */
+  .honesty p{
+    font-size:1.05rem;
+    margin-bottom:20px;
+    text-align:center;
+    line-height:1.9;
+  }
+  .honesty .strong-line{
+    font-family:"Shippori Mincho",serif;
+    color:var(--gold-1);
+  }
+  .honesty .close{
+    margin-top:34px;
+    font-size:1.12rem;
+    font-family:"Shippori Mincho",serif;
+    color:#fff;
+  }
+
+  /* ============================================================
+     ⑤ ベネフィット（カード4枚）
+     ============================================================ */
+  .cards{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+    max-width:480px;
+    margin:0 auto;
+  }
+  .card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:24px 22px;
+    box-shadow:0 6px 16px rgba(30,45,90,0.05);
+    position:relative;
+    overflow:hidden;
+  }
+  .card::before{
+    content:"";
+    position:absolute;
+    top:0;left:0;
+    width:4px;height:100%;
+    background:linear-gradient(180deg,var(--gold-1),var(--gold-2));
+  }
+  .card .num{
+    font-family:"Shippori Mincho",serif;
+    font-size:1.4rem;
+    color:var(--rose);
+    line-height:1;
+    margin-bottom:10px;
+    display:block;
+  }
+  .card p{
+    font-size:0.98rem;
+    line-height:1.8;
+  }
+
+  /* ============================================================
+     ⑥ 著者紹介
+     ============================================================ */
+  .author{
+    max-width:480px;
+    margin:0 auto;
+    text-align:center;
+  }
+  .author-photo{
+    width:120px;height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:0 auto 22px;
+    border:3px solid #fff;
+    box-shadow:0 8px 20px rgba(30,45,90,0.15);
+    display:block;
+  }
+  .author h3{
+    font-size:1.25rem;
+    color:var(--navy);
+    margin-bottom:6px;
+  }
+  .author .role{
+    font-size:0.88rem;
+    color:var(--rose);
+    margin-bottom:18px;
+    letter-spacing:0.04em;
+  }
+  .author p{
+    font-size:0.98rem;
+    text-align:left;
+    line-height:1.9;
+  }
+  .author .quote{
+    margin-top:18px;
+    text-align:center;
+    font-family:"Shippori Mincho",serif;
+    color:var(--navy);
+    font-size:1.02rem;
+  }
+
+  /* ============================================================
+     ⑦ こんな方へ
+     ============================================================ */
+  .fit-list{
+    list-style:none;
+    max-width:460px;
+    margin:0 auto;
+  }
+  .fit-list li{
+    position:relative;
+    padding-left:30px;
+    margin-bottom:22px;
+    font-size:1.0rem;
+  }
+  .fit-list li::before{
+    content:"";
+    position:absolute;
+    left:2px;top:11px;
+    width:9px;height:9px;
+    background:var(--gold-1);
+    border-radius:50%;
+  }
+  .fit-close{
+    text-align:center;
+    font-size:1.3rem;
+    margin-top:38px;
+    color:var(--navy);
+  }
+
+  /* ============================================================
+     ⑧ ラストCTA
+     ============================================================ */
+  .last-copy{
+    text-align:center;
+    font-family:"Shippori Mincho",serif;
+    font-size:1.5rem;
+    line-height:1.7;
+    color:#fff;
+    margin-bottom:8px;
+  }
+  .last-copy .gold{color:var(--gold-1);}
+
+  /* ============================================================
+     フッター
+     ============================================================ */
+  footer{
+    background:var(--navy);
+    color:rgba(244,239,234,0.65);
+    text-align:center;
+    padding:28px 24px 36px;
+    font-size:0.78rem;
+    letter-spacing:0.04em;
+  }
+
+  /* ============================================================
+     下部固定CTAバー（スマホ）
+     ============================================================ */
+  .sticky-bar{
+    position:fixed;
+    left:0;bottom:0;
+    width:100%;
+    z-index:50;
+    background:rgba(30,45,90,0.92);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+    padding:8px 14px;
+    box-shadow:0 -4px 16px rgba(0,0,0,0.18);
+    transition:transform .3s ease, opacity .3s ease;
+  }
+  .sticky-bar a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:46px;
+    width:100%;
+    background:linear-gradient(135deg, var(--gold-1) 0%, var(--gold-2) 100%);
+    color:var(--navy);
+    font-weight:700;
+    font-size:1.0rem;
+    text-decoration:none;
+    border-radius:999px;
+    letter-spacing:0.03em;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,0.35);
+  }
+  /* ヒーロー表示中は隠す（うるさくしない） */
+  .sticky-bar.hidden{
+    transform:translateY(120%);
+    opacity:0;
+    pointer-events:none;
+  }
+
+  /* ============================================================
+     フェードイン
+     ============================================================ */
+  .reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .reveal.in{
+    opacity:1;
+    transform:none;
+  }
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ============================================================
+     タブレット／PC（基準はスマホ。広い画面で少し整える）
+     ============================================================ */
+  @media (min-width:640px){
+    body{font-size:17px;}
+    .hero h1{font-size:2.5rem;}
+    .sec-head{font-size:1.75rem;}
+    .cards{grid-template-columns:1fr 1fr;gap:20px;}
+    /* PCでは下部固定バーは不要（場所に余裕があるため常時非表示） */
+    .sticky-bar{display:none;}
+    body{padding-bottom:0;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     ① ファーストビュー
+     ============================================================ -->
+<header class="hero">
+  <div class="wrap">
+    <img src="./cover.png" alt="書籍『ブラインドタッチしかできなかった私が、“会えるオンライン秘書”になるまで』表紙" class="hero-cover">
+    <h1>私には、何もない</h1>
+    <p class="sub">そう思っていた専業主婦が、いま、<br>AIを使いこなす「経営者の秘書」になりました。</p>
+    <p class="note">――ブラインドタッチしかできなかった私の、ぜんぶ実話の記録。</p>
+    <div class="cta-area" style="margin-top:30px;">
+      <a class="cta small" href="https://amzn.asia/d/02SkeNxl" target="_blank" rel="noopener">Amazonで読む ▶</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     ② 共感パート
+     ============================================================ -->
+<section class="reveal">
+  <div class="wrap">
+    <h2 class="sec-head">こんな気持ち、<span class="accent">ありませんか？</span><span class="ornament"></span></h2>
+    <ul class="checklist">
+      <li>夫の稼ぎだけでは将来が不安。でも、近所のパートはなかなか採用されない</li>
+      <li>「フリーランス」なんて、何も持っていない自分には遠すぎる</li>
+      <li>ポイ活も、インスタも、アフィリエイトも、試しては挫折した</li>
+      <li>子どもの急な発熱で、パート先に「申し訳ありません」と電話するたび、胸が痛む</li>
+    </ul>
+    <p class="empathy-close mincho">少し前の私が、まさにそうでした。</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     ③ 物語の予告 ＋ メインCTA①
+     ============================================================ -->
+<section class="story reveal">
+  <div class="wrap">
+    <div class="story-block">
+      <p class="lead-mincho">2023年、一家でコロナに倒れた1ヶ月。<br>押し入れから引っぱり出したのは、7年前のパソコン。<br>できることは、ブラインドタッチだけ。</p>
+      <p style="margin-top:30px;">時給1,100円から始まった在宅ワーク。オンラインの実力者に圧倒され、「自分は底辺だ」と落ち込む日々。</p>
+      <p style="text-align:center;" class="mincho">――ところが、ある身近な場所で、人生が動き出します。</p>
+    </div>
+
+    <div class="cta-area">
+      <a class="cta" href="https://amzn.asia/d/02SkeNxl" target="_blank" rel="noopener">続きを、Amazonで読む ▶</a>
+      <span class="cta-note">Kindle Unlimited なら読み放題対象 ／ 今だけ発売記念価格</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ④ 正直さ（ネイビー）
+     ============================================================ -->
+<section class="navy honesty reveal">
+  <div class="wrap">
+    <h2 class="sec-head">きれいな成功談では、<span class="accent">ありません。</span><span class="ornament"></span></h2>
+    <p>DMを100件送って、返ってきた返信は<span class="strong-line">たったの5件。</span></p>
+    <p>意気込んで始めた発信企画は、<span class="strong-line">3日で挫折。</span></p>
+    <p>うまくいかなかった時期のことも、お金のことも、ぜんぶ正直に書きました。</p>
+    <p class="close">だからこの本は、「私にもできるかも」を、嘘なく手渡せます。</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     ⑤ ベネフィット ＋ CTA②
+     ============================================================ -->
+<section class="reveal">
+  <div class="wrap">
+    <h2 class="sec-head">この本で、<span class="accent">見つかるもの</span><span class="ornament"></span></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="num">01</span>
+        <p>オンラインで埋もれたスキルを、地元で「武器」に変える考え方</p>
+      </div>
+      <div class="card">
+        <span class="num">02</span>
+        <p>実績ゼロから、最初の1件を生み出したDM営業のリアル</p>
+      </div>
+      <div class="card">
+        <span class="num">03</span>
+        <p>3児の母が、AIを“相棒”にして仕事を回す具体的な使い方</p>
+      </div>
+      <div class="card">
+        <span class="num">04</span>
+        <p>「続かない自分」と、どう付き合うか</p>
+      </div>
+    </div>
+
+    <div class="cta-area">
+      <a class="cta" href="https://amzn.asia/d/02SkeNxl" target="_blank" rel="noopener">Amazonで詳細を見る ▶</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ⑥ 著者紹介
+     ============================================================ -->
+<section class="rose-soft reveal">
+  <div class="wrap">
+    <h2 class="sec-head">著者について<span class="ornament"></span></h2>
+    <div class="author">
+      <img src="{{著者写真パス}}" alt="著者 石渡有沙（Oari）" class="author-photo"
+           onerror="this.style.display='none'">
+      <h3>石渡有沙（Oari）</h3>
+      <p class="role">3児の母／オンライン秘書・Canvaデザイナー</p>
+      <p>7年のブランクから在宅ワークを始め、地域のつながりを足がかりに、経営者の秘書・デザイン・イベント運営まで手がける。秘書検定2級・FP2級・簿記3級・保育士資格（独学取得）を保有。埼玉県在住。</p>
+      <p class="quote">「ぜんぶ、私が実際に経験して、自分の言葉で書きました。」</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ⑦ こんな方へ
+     ============================================================ -->
+<section class="reveal">
+  <div class="wrap">
+    <h2 class="sec-head">もし、ひとつでも<span class="accent">当てはまるなら。</span><span class="ornament"></span></h2>
+    <ul class="fit-list">
+      <li>在宅で、自分のペースで働きたい</li>
+      <li>「私には何もない」と、一歩を踏み出せずにいる</li>
+      <li>特別なスキルがなくても、できることから始めたい</li>
+    </ul>
+    <p class="fit-close mincho">その一歩を、この本が後押しできたら。</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     ⑧ ラストCTA（クロージング）
+     ============================================================ -->
+<section class="navy reveal" style="padding:72px 0;">
+  <div class="wrap">
+    <p class="last-copy">100件送って、95件返ってこなくていい。<br><span class="gold">5件あれば、人生は動き出す。</span></p>
+    <div class="cta-area" style="margin-top:36px;">
+      <a class="cta large" href="https://amzn.asia/d/02SkeNxl" target="_blank" rel="noopener">Amazonで今すぐ読む ▶</a>
+      <span class="cta-note">Kindle版 ／ Kindle Unlimited 読み放題対象</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     フッター
+     ============================================================ -->
+<footer>
+  © 2026 石渡有沙（Oari）
+</footer>
+
+<!-- ============================================================
+     下部固定CTAバー（スマホ）
+     ============================================================ -->
+<div class="sticky-bar hidden" id="stickyBar">
+  <a href="https://amzn.asia/d/02SkeNxl" target="_blank" rel="noopener">Amazonで読む ▶</a>
+</div>
+
+<script>
+  // フェードイン（画面に入ったら）
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){
+      els.forEach(function(el){el.classList.add('in');});
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    },{threshold:0.12});
+    els.forEach(function(el){io.observe(el);});
+  })();
+
+  // 下部固定CTAバー：ヒーローを過ぎたら表示
+  (function(){
+    var bar = document.getElementById('stickyBar');
+    var hero = document.querySelector('.hero');
+    if(!bar || !hero) return;
+    if(!('IntersectionObserver' in window)){
+      bar.classList.remove('hidden');
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        // ヒーローが画面に見えている間は隠す
+        if(e.isIntersecting){
+          bar.classList.add('hidden');
+        }else{
+          bar.classList.remove('hidden');
+        }
+      });
+    },{threshold:0.1});
+    io.observe(hero);
+  })();
+</script>
+
+</body>
+</html>
